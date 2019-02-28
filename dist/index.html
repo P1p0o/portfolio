@@ -9,12 +9,13 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
   <title>Portfolio</title>
 </head>
 
-<body id="bg-img">
+<body id="bg-img" class="animated fadeIn">
   <header>
-    <div class="menu-btn">
+    <div class="menu-btn animated zoomInDown slow">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -26,12 +27,12 @@
       </div>
       <ul class="menu-nav">
         <li class="nav-item current">
-          <a href="index.html" class="nav-link">
+          <a onclick="selectContent(0)" class="nav-link">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">
+          <a onclick="selectContent(1)" class="nav-link">
             About
           </a>
         </li>
@@ -49,26 +50,77 @@
     </nav>
   </header>
 
-  <main id="home">
-    <h1 class="lg-heading">
-      Philippe
-      <span class="text-secondary">Eid</span>
-    </h1>
-    <h2 class="sm-heading">
-      Full stack Web Developer <br>
-      UI/UX designer <br> 
-      Worpress developer
-    </h2>
-    <div class="icons">
-      <a href="#!">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="#!">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="#!">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
+  <main id="main">
+    <div class="container selected" id="home">
+        <h1 class="lg-heading animated fadeInLeft">
+            Philippe
+            <span class="text-secondary">Eid</span>
+          </h1>
+          <h2 class="sm-heading animated fadeInLeft slow">
+            Full stack Web Developer <br>
+            UI/UX designer <br> 
+            Worpress developer
+          </h2>
+          <div class="icons  animated fadeInLeft slow">
+            <a href="#!">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#!">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="#!">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+    </div>
+    <div class="container" id="about">
+        <h1 class="lg-heading animated fadeInLeft">
+            About
+            <span class="text-secondary">me</span>
+          </h1>
+          <h2 class="sm-heading animated fadeInLeft slow">
+            Let me tell you a few things...
+          </h2>
+          <div class="about-info">
+            <img src="img/portrait.jpg" alt="John Doe" class="bio-image animated rollIn slow">
+      
+            <div class="bio animated fadeInUp slow">
+              <h3 class="text-secondary">BIO</h3>
+              <p>I'm a Web developer based in Lyon. I love the digital world, that's why I always try to improve my
+                developement/design skill to be able to push each project to the next level.<br /><br />
+                I like to work on projects using HTML/Scss/Js (React/Node)/GraphQL, but I also like to work with
+                Wordpress/PHP<br /><br />
+                To be able to offer the best product, I always analyze what's the latest design and coding trends.
+              </p>
+            </div>
+      
+            <div class="job job-1 animated fadeInUp slow">
+              <h3>Mile Positionning Solutions - 18 months</h3>
+              <h4>Web/mobile application developer</h4>
+              <h5>JavaScript - Firebase - Swift - Java</h5>
+              <p>Development of the Runnin'City mobile application as well as white label applications.<br>
+                Development of a content management system (CMS) to administer these different applications.</p>
+            </div>
+      
+            <div class="job job-2 animated fadeInUp slow">
+              <h3>Solutec - 2 years</h3>
+              <h5>Web application developer/h5>
+                <h6>JavaScript - JEE - PostgreSQL</h6>
+                <p>Developement of a Web reporting application for the Carrefour IT department.<br>
+                  Implementation of unit tests.
+                </p>
+            </div>
+      
+            <div class="job job-3">
+              <h3>Interflora - 1 year</h3>
+              <h5>Developer of an e-commerce Website</h5>
+              <h6>JavaScript - PHP</h6>
+              <p>Maintain and evolve Interflora's Website.<br>
+                Set up of automatic tests.<br>
+                Implementation of AB tests to define the next evolutions.
+              </p>
+            </div>
+          </div>
     </div>
   </main>
 

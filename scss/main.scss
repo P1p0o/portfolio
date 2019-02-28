@@ -15,6 +15,9 @@ body {
   line-height: 1.5;
 }
 
+.nav-link {
+  cursor: pointer;
+}
 // Headings
 h1,
 h2,
@@ -28,7 +31,7 @@ h3 {
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 1rem 0.2rem 0;
     background: rgba(lighten($primary-color, 2), 0.2);
   }
 }
@@ -66,9 +69,9 @@ main {
     }
   }
 
-  &#home {
+  .container {
     overflow: hidden;
-    h1 {
+    #home h1 {
       margin-top: 20vh;
     }
   }
@@ -187,6 +190,13 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+.container {
+  display: none;
+  &.selected {
+    display: block;
+  }
 }
 
 @import 'mobile';
